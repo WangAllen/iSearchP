@@ -1,6 +1,6 @@
 package test.org.dbrg.oauth;
 
-import org.dbrg.oauth.ConfLoader;
+import org.dbrg.utils.ConfLoader;
 
 public class TestConfLoader {
 	public static void testGetValue() {
