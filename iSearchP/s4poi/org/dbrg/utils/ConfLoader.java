@@ -1,14 +1,14 @@
-package org.dbrg.oauth;
+package org.dbrg.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
-import org.dbrg.consts.CONSTS;
-
+/**
+ * 从存放accessToken的文件中取得accessToken信息
+ * @author wail
+ *
+ */
 public class ConfLoader {
 	public ConfLoader(){}
 	private static Properties cprops = new Properties();	
@@ -33,6 +33,11 @@ public class ConfLoader {
 
 	}
 	
+	/**
+	 * 根据key取对应属性值
+	 * @param key
+	 * @return
+	 */
 	public static String getValue(String key){
 		return cprops.getProperty(key);
 	}

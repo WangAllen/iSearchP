@@ -10,9 +10,7 @@ public class TestConfLoader {
 		 * 	expireIn
 		 * 	refreshToken
 		 * 	uid
-		 */
-		
-		
+		 */		
 		String access_token = ConfLoader.getValue("access_token");
 		System.out.println(access_token);
 		String expireIn = ConfLoader.getValue("expireIn");

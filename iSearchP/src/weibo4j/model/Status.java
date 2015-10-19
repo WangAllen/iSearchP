@@ -9,6 +9,11 @@ import weibo4j.org.json.JSONArray;
 import weibo4j.org.json.JSONException;
 import weibo4j.org.json.JSONObject;
 
+/**
+ * 用户状态
+ * @author wail
+ *
+ */
 public class Status extends WeiboResponse {
 
 	private static final long serialVersionUID = -8795691786466526420L;
@@ -47,6 +52,12 @@ public class Status extends WeiboResponse {
 		constructJson(json);
 	}
 
+	/**
+	 * 根据json对象解析得到用户状态
+	 * 
+	 * @param json
+	 * @throws WeiboException
+	 */
 	private void constructJson(JSONObject json) throws WeiboException {
 		try {
 			createdAt = parseDate(json.getString("created_at"), "EEE MMM dd HH:mm:ss z yyyy");
@@ -86,6 +97,10 @@ public class Status extends WeiboResponse {
 		}
 	}
 
+	/**
+	 * 从geo中获取得到经纬度信息
+	 * @param geo
+	 */
 	private void getGeoInfo(String geo) {
 		StringBuffer value= new StringBuffer();
 		for(char c:geo.toCharArray()){
@@ -103,9 +118,21 @@ public class Status extends WeiboResponse {
 	}
 
 
+	/**
+	 * 直接从json中获取用户状态
+	 * @param json
+	 * @throws WeiboException
+	 * @throws JSONException
+	 */
 	public Status(JSONObject json)throws WeiboException, JSONException{
 		constructJson(json);
 	}
+	/**
+	 * 从字符串获取用户状态
+	 * @param str
+	 * @throws WeiboException
+	 * @throws JSONException
+	 */
 	public Status(String str) throws WeiboException, JSONException {
 		// StatusStream uses this constructor
 		super();
@@ -114,6 +141,10 @@ public class Status extends WeiboResponse {
 	}
 
 	
+	/**
+	 * 获取用户
+	 * @return
+	 */
 	public User getUser() {
 		return user;
 	}

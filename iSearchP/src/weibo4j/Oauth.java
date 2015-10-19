@@ -18,18 +18,25 @@ import weibo4j.util.WeiboConfig;
 
 public class Oauth extends Weibo {
 	/**
-	 * 
+	 * serialVersionUID
 	 */
 	private static final long serialVersionUID = 7003420545330439247L;
 	// ----------------------------针对站内应用处理SignedRequest获取accesstoken----------------------------------------
 	public String user_id;
 
+	/**
+	 * 获取accessToken <p>
+	 * @2015-10-19 15:34:24
+	 * @return
+	 */
 	public String getToken() {
+		// 继承自Weibo，protected String
 		return access_token;
 	}
 
-	/*
-	 * 解析站内应用post的SignedRequest split为part1和part2两部分
+	/**
+	 * 解析站内应用post的SignedRequest <p>
+	 * split为part1和part2两部分
 	 */
 	public String parseSignedRequest(String signed_request) throws IOException,
 			InvalidKeyException, NoSuchAlgorithmException {
@@ -58,8 +65,10 @@ public class Oauth extends Weibo {
 		}
 	}
 
-	/*
+	/**
 	 * 处理解析后的json解析
+	 * @param json
+	 * @return access_token: String
 	 */
 	public String ts(String json) {
 		try {
@@ -75,6 +84,12 @@ public class Oauth extends Weibo {
 
 	/*----------------------------Oauth接口--------------------------------------*/
 
+	/**
+	 * 利用code获取AccessToken
+	 * @param code
+	 * @return
+	 * @throws WeiboException
+	 */
 	public AccessToken getAccessTokenByCode(String code) throws WeiboException {
 		return new AccessToken(client.post(
 				WeiboConfig.getValue("accessTokenURL"),
@@ -89,11 +104,20 @@ public class Oauth extends Weibo {
 								.getValue("redirect_URI")) }, false, null));
 	}
 
+	/**
+	 * 根据config.properties中配置信息以及response_type产生一个url
+	 * 
+	 * @param response_type
+	 * @return
+	 * @throws WeiboException
+	 */
 	public String authorize(String response_type) throws WeiboException {
 		return WeiboConfig.getValue("authorizeURL").trim() + "?client_id="
 				+ WeiboConfig.getValue("client_ID").trim() + "&redirect_uri="
 				+ WeiboConfig.getValue("redirect_URI").trim()
 				+ "&response_type=" + response_type;
+		
+		// https://api.weibo.com/oauth2/authorize?client_id=2678762733&redirect_uri=https://api.weibo.com/oauth2/default.html&response_type=code
 	}
 
 	public String authorize(String response_type, String state)

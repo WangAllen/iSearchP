@@ -261,3 +261,21 @@
 1071 DEBUG [2015-10-17 23:22:27]  Api-Server-IP:10.73.89.47
 1076 DEBUG [2015-10-17 23:22:27]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
 
+0    INFO  [2015-10-19 15:51:51]  code: 
+1206 DEBUG [2015-10-19 15:51:52]  Request:
+1208 DEBUG [2015-10-19 15:51:52]  POSThttps://api.weibo.com/oauth2/access_token
+8831 DEBUG [2015-10-19 15:52:00]  Response:
+8832 DEBUG [2015-10-19 15:52:00]  https StatusCode:400
+8833 DEBUG [2015-10-19 15:52:00]  Server:nginx/1.6.1
+8834 DEBUG [2015-10-19 15:52:00]  Date:Mon, 19 Oct 2015 07:51:59 GMT
+8835 DEBUG [2015-10-19 15:52:00]  Transfer-Encoding:chunked
+8836 DEBUG [2015-10-19 15:52:00]  Connection:keep-alive
+8838 DEBUG [2015-10-19 15:52:00]  Pragma:No-cache
+8839 DEBUG [2015-10-19 15:52:00]  Cache-Control:no-cache
+8840 DEBUG [2015-10-19 15:52:00]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+8841 DEBUG [2015-10-19 15:52:00]  Api-Server-IP:10.75.25.115
+8842 DEBUG [2015-10-19 15:52:00]  SINA-LB:aGwuOS5zZzMuZnQubGIuc2luYW5vZGUuY29t
+8843 DEBUG [2015-10-19 15:52:00]  SINA-TS:OTcwOWMzNjggMCAxIDEgNiAxMwo=
+8885 WARN  [2015-10-19 15:52:00]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+8888 DEBUG [2015-10-19 15:52:00]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:"}
+
