@@ -1,0 +1,263 @@
+0    INFO  [2015-10-16 12:39:48]  code: 
+96   DEBUG [2015-10-16 12:39:48]  Request:
+96   DEBUG [2015-10-16 12:39:48]  POSThttps://api.weibo.com/oauth2/access_token
+923  DEBUG [2015-10-16 12:39:49]  Response:
+924  DEBUG [2015-10-16 12:39:49]  https StatusCode:400
+925  DEBUG [2015-10-16 12:39:49]  Server:nginx/1.6.1
+925  DEBUG [2015-10-16 12:39:49]  Date:Fri, 16 Oct 2015 04:39:47 GMT
+925  DEBUG [2015-10-16 12:39:49]  Transfer-Encoding:chunked
+926  DEBUG [2015-10-16 12:39:49]  Connection:keep-alive
+926  DEBUG [2015-10-16 12:39:49]  Pragma:No-cache
+926  DEBUG [2015-10-16 12:39:49]  Cache-Control:no-cache
+927  DEBUG [2015-10-16 12:39:49]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+927  DEBUG [2015-10-16 12:39:49]  Api-Server-IP:10.75.25.86
+927  DEBUG [2015-10-16 12:39:49]  SINA-LB:aGEuMjIuZzEuc2UubGIuc2luYW5vZGUuY29t
+928  DEBUG [2015-10-16 12:39:49]  SINA-TS:NGI4OGMzNjggMCAxIDEgNyA0Cg==
+1032 WARN  [2015-10-16 12:39:49]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+1034 DEBUG [2015-10-16 12:39:49]  {"error":"redirect_uri_mismatch","error_code":21322,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token"}
+
+0    INFO  [2015-10-17 14:50:46]  code: 1b1335960d55fc8d6661f53eec62a1d6
+71   DEBUG [2015-10-17 14:50:46]  Request:
+72   DEBUG [2015-10-17 14:50:46]  POSThttps://api.weibo.com/oauth2/access_token
+886  DEBUG [2015-10-17 14:50:47]  Response:
+886  DEBUG [2015-10-17 14:50:47]  https StatusCode:200
+886  DEBUG [2015-10-17 14:50:47]  Server:nginx/1.6.1
+886  DEBUG [2015-10-17 14:50:47]  Date:Sat, 17 Oct 2015 06:50:44 GMT
+886  DEBUG [2015-10-17 14:50:47]  Content-Type:text/plain;charset=UTF-8
+887  DEBUG [2015-10-17 14:50:47]  Content-Length:117
+887  DEBUG [2015-10-17 14:50:47]  Connection:keep-alive
+887  DEBUG [2015-10-17 14:50:47]  Pragma:No-cache
+887  DEBUG [2015-10-17 14:50:47]  Cache-Control:no-cache
+887  DEBUG [2015-10-17 14:50:47]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+887  DEBUG [2015-10-17 14:50:47]  Api-Server-IP:10.73.89.46
+887  DEBUG [2015-10-17 14:50:47]  SINA-LB:aGEuMjEuZzEuc2UubGIuc2luYW5vZGUuY29t
+887  DEBUG [2015-10-17 14:50:47]  SINA-TS:NGI4OGMzNjggMCAxIDEgNCAxNwo=
+891  DEBUG [2015-10-17 14:50:47]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
+0    DEBUG [2015-10-17 16:42:31]  Request:
+10   DEBUG [2015-10-17 16:42:31]  GET:https://api.weibo.com/2/account/get_privacy.json
+163  DEBUG [2015-10-17 16:42:31]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+163  DEBUG [2015-10-17 16:42:31]  API-RemoteIP: 172.18.198.129
+1669 DEBUG [2015-10-17 16:42:32]  Response:
+1670 DEBUG [2015-10-17 16:42:32]  https StatusCode:200
+1670 DEBUG [2015-10-17 16:42:32]  Server:nginx/1.6.1
+1670 DEBUG [2015-10-17 16:42:32]  Date:Sat, 17 Oct 2015 08:42:30 GMT
+1671 DEBUG [2015-10-17 16:42:32]  Content-Type:application/json;charset=UTF-8
+1671 DEBUG [2015-10-17 16:42:32]  Transfer-Encoding:chunked
+1671 DEBUG [2015-10-17 16:42:32]  Connection:keep-alive
+1672 DEBUG [2015-10-17 16:42:32]  Api-Server-IP:10.77.108.41
+1672 DEBUG [2015-10-17 16:42:32]  Vary:Accept-Encoding
+1672 DEBUG [2015-10-17 16:42:32]  SINA-LB:aGEuMTc2LmcxLnNlLmxiLnNpbmFub2RlLmNvbQ==
+1673 DEBUG [2015-10-17 16:42:32]  SINA-TS:NDg4OGMzNjggMCAxIDEgNyA4Cg==
+1716 WARN  [2015-10-17 16:42:33]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+1717 DEBUG [2015-10-17 16:42:33]  {"badge":1,"comment":0,"geo":1,"message":0,"mobile":1,"profileUrlType":1,"realname":0,"webim":1}
+
+1780 INFO  [2015-10-17 16:42:33]  Privacy [badge=1, comment=0, geo=1, message=0, mobile=1, profileUrlType=1, webim=1, realname=0]
+0    DEBUG [2015-10-17 16:45:17]  Request:
+1    DEBUG [2015-10-17 16:45:17]  GET:https://api.weibo.com/2/account/get_privacy.json
+0    DEBUG [2015-10-17 16:49:32]  Request:
+21   DEBUG [2015-10-17 16:49:32]  GET:https://api.weibo.com/2/account/get_privacy.json
+0    DEBUG [2015-10-17 16:50:06]  Request:
+1    DEBUG [2015-10-17 16:50:06]  GET:https://api.weibo.com/2/account/get_privacy.json
+54   DEBUG [2015-10-17 16:50:07]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+54   DEBUG [2015-10-17 16:50:07]  API-RemoteIP: 172.18.198.129
+896  DEBUG [2015-10-17 16:50:07]  Response:
+897  DEBUG [2015-10-17 16:50:07]  https StatusCode:200
+899  DEBUG [2015-10-17 16:50:07]  Server:nginx/1.6.1
+899  DEBUG [2015-10-17 16:50:07]  Date:Sat, 17 Oct 2015 08:50:05 GMT
+900  DEBUG [2015-10-17 16:50:07]  Content-Type:application/json;charset=UTF-8
+900  DEBUG [2015-10-17 16:50:07]  Transfer-Encoding:chunked
+901  DEBUG [2015-10-17 16:50:07]  Connection:keep-alive
+901  DEBUG [2015-10-17 16:50:07]  Api-Server-IP:10.75.5.58
+902  DEBUG [2015-10-17 16:50:07]  Vary:Accept-Encoding
+906  WARN  [2015-10-17 16:50:07]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+907  DEBUG [2015-10-17 16:50:07]  {"badge":1,"comment":0,"geo":1,"message":0,"mobile":1,"profileUrlType":1,"realname":0,"webim":1}
+
+913  INFO  [2015-10-17 16:50:07]  Privacy [badge=1, comment=0, geo=1, message=0, mobile=1, profileUrlType=1, webim=1, realname=0]
+0    DEBUG [2015-10-17 16:51:17]  Request:
+1    DEBUG [2015-10-17 16:51:17]  GET:https://api.weibo.com/2/account/get_privacy.json
+53   DEBUG [2015-10-17 16:51:17]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+53   DEBUG [2015-10-17 16:51:17]  API-RemoteIP: 172.18.198.129
+1360 DEBUG [2015-10-17 16:51:18]  Response:
+1361 DEBUG [2015-10-17 16:51:18]  https StatusCode:200
+1361 DEBUG [2015-10-17 16:51:18]  Server:nginx/1.6.1
+1361 DEBUG [2015-10-17 16:51:18]  Date:Sat, 17 Oct 2015 08:51:16 GMT
+1361 DEBUG [2015-10-17 16:51:18]  Content-Type:application/json;charset=UTF-8
+1361 DEBUG [2015-10-17 16:51:18]  Transfer-Encoding:chunked
+1362 DEBUG [2015-10-17 16:51:18]  Connection:keep-alive
+1362 DEBUG [2015-10-17 16:51:18]  Api-Server-IP:10.75.5.96
+1362 DEBUG [2015-10-17 16:51:18]  Vary:Accept-Encoding
+1364 WARN  [2015-10-17 16:51:18]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+1365 DEBUG [2015-10-17 16:51:18]  {"badge":1,"comment":0,"geo":1,"message":0,"mobile":1,"profileUrlType":1,"realname":0,"webim":1}
+
+1369 INFO  [2015-10-17 16:51:18]  Privacy [badge=1, comment=0, geo=1, message=0, mobile=1, profileUrlType=1, webim=1, realname=0]
+0    DEBUG [2015-10-17 16:51:55]  Request:
+2    DEBUG [2015-10-17 16:51:55]  GET:https://api.weibo.com/2/account/end_session.json
+57   DEBUG [2015-10-17 16:51:55]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+58   DEBUG [2015-10-17 16:51:55]  API-RemoteIP: 172.18.198.129
+1068 DEBUG [2015-10-17 16:51:56]  Response:
+1068 DEBUG [2015-10-17 16:51:56]  https StatusCode:200
+1068 DEBUG [2015-10-17 16:51:56]  Server:nginx/1.6.1
+1069 DEBUG [2015-10-17 16:51:56]  Date:Sat, 17 Oct 2015 08:51:53 GMT
+1069 DEBUG [2015-10-17 16:51:56]  Content-Type:application/json;charset=UTF-8
+1069 DEBUG [2015-10-17 16:51:56]  Transfer-Encoding:chunked
+1069 DEBUG [2015-10-17 16:51:56]  Connection:keep-alive
+1069 DEBUG [2015-10-17 16:51:56]  Api-Server-IP:10.75.5.94
+1069 DEBUG [2015-10-17 16:51:56]  Vary:Accept-Encoding
+1072 WARN  [2015-10-17 16:51:56]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+1073 DEBUG [2015-10-17 16:51:56]  {"id":1252999410,"idstr":"1252999410","class":1,"screen_name":"八方竹圃","name":"八方竹圃","province":"22","city":"1000","location":"吉林","description":"许你一生","url":"","profile_image_url":"http://tp3.sinaimg.cn/1252999410/50/5616328883/1","profile_url":"u/1252999410","domain":"","weihao":"","gender":"m","followers_count":34,"friends_count":34,"pagefriends_count":0,"statuses_count":91,"favourites_count":2,"created_at":"Mon Nov 14 17:02:46 +0800 2011","following":false,"allow_all_act_msg":true,"geo_enabled":true,"verified":false,"verified_type":-1,"remark":"","ptype":0,"allow_all_comment":true,"avatar_large":"http://tp3.sinaimg.cn/1252999410/180/5616328883/1","avatar_hd":"http://tp3.sinaimg.cn/1252999410/180/5616328883/1","verified_reason":"","verified_trade":"","verified_reason_url":"","verified_source":"","verified_source_url":"","follow_me":false,"online_status":0,"bi_followers_count":0,"lang":"zh-cn","star":0,"mbtype":0,"mbrank":0,"block_word":0,"block_app":0,"credit_score":80,"user_ability":0,"urank":9}
+
+1177 INFO  [2015-10-17 16:51:56]  User [id=1252999410, screenName=八方竹圃, name=八方竹圃, province=22, city=1000, location=吉林, description=许你一生, url=, profileImageUrl=http://tp3.sinaimg.cn/1252999410/50/5616328883/1, userDomain=, gender=m, followersCount=34, friendsCount=34, statusesCount=91, favouritesCount=2, createdAt=Mon Nov 14 17:02:46 CST 2011, following=false, verified=false, verifiedType=-1, allowAllActMsg=true, allowAllComment=true, followMe=false, avatarLarge=http://tp3.sinaimg.cn/1252999410/180/5616328883/1, onlineStatus=0, status=null, biFollowersCount=0, remark=null, lang=zh-cn, verifiedReason=, weihao=, statusId=]
+0    DEBUG [2015-10-17 16:54:37]  Request:
+1    DEBUG [2015-10-17 16:54:37]  GET:https://api.weibo.com/2/account/get_uid.json
+61   DEBUG [2015-10-17 16:54:37]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+62   DEBUG [2015-10-17 16:54:37]  API-RemoteIP: 172.18.198.129
+893  DEBUG [2015-10-17 16:54:38]  Response:
+894  DEBUG [2015-10-17 16:54:38]  https StatusCode:200
+894  DEBUG [2015-10-17 16:54:38]  Server:nginx/1.6.1
+894  DEBUG [2015-10-17 16:54:38]  Date:Sat, 17 Oct 2015 08:54:36 GMT
+894  DEBUG [2015-10-17 16:54:38]  Content-Type:application/json;charset=UTF-8
+894  DEBUG [2015-10-17 16:54:38]  Transfer-Encoding:chunked
+894  DEBUG [2015-10-17 16:54:38]  Connection:keep-alive
+895  DEBUG [2015-10-17 16:54:38]  Api-Server-IP:10.75.5.65
+895  DEBUG [2015-10-17 16:54:38]  Vary:Accept-Encoding
+921  WARN  [2015-10-17 16:54:38]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+922  DEBUG [2015-10-17 16:54:38]  {"uid":1252999410}
+
+970  INFO  [2015-10-17 16:54:38]  {"uid":1252999410}
+0    DEBUG [2015-10-17 16:55:11]  Request:
+1    DEBUG [2015-10-17 16:55:11]  GET:https://api.weibo.com/2/account/rate_limit_status.json
+54   DEBUG [2015-10-17 16:55:11]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+54   DEBUG [2015-10-17 16:55:11]  API-RemoteIP: 172.18.198.129
+797  DEBUG [2015-10-17 16:55:12]  Response:
+798  DEBUG [2015-10-17 16:55:12]  https StatusCode:200
+798  DEBUG [2015-10-17 16:55:12]  Server:nginx/1.6.1
+798  DEBUG [2015-10-17 16:55:12]  Date:Sat, 17 Oct 2015 08:55:10 GMT
+799  DEBUG [2015-10-17 16:55:12]  Content-Type:application/json;charset=UTF-8
+799  DEBUG [2015-10-17 16:55:12]  Transfer-Encoding:chunked
+799  DEBUG [2015-10-17 16:55:12]  Connection:keep-alive
+800  DEBUG [2015-10-17 16:55:12]  Api-Server-IP:10.75.5.96
+800  DEBUG [2015-10-17 16:55:12]  Vary:Accept-Encoding
+805  WARN  [2015-10-17 16:55:12]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+806  DEBUG [2015-10-17 16:55:12]  {"api_rate_limits":[{"api":"/statuses/update","limit":15,"limit_time_unit":"HOURS","remaining_hits":15},{"api":"/comments/create","limit":15,"limit_time_unit":"HOURS","remaining_hits":15},{"api":"/direct_messages/new","limit":15,"limit_time_unit":"HOURS","remaining_hits":15},{"api":"/friendships/create","limit":15,"limit_time_unit":"DAYS","remaining_hits":15},{"api":"/statuses/update","limit":50,"limit_time_unit":"DAYS","remaining_hits":50},{"api":"/comments/create","limit":50,"limit_time_unit":"DAYS","remaining_hits":50},{"api":"/users/query","limit":15,"limit_time_unit":"DAYS","remaining_hits":15},{"api":"/users/query","limit":500,"limit_time_unit":"HOURS","remaining_hits":500},{"api":"/users/query","limit":1000,"limit_time_unit":"DAYS","remaining_hits":1000},{"api":"/users/query","limit":50,"limit_time_unit":"MINUTES","remaining_hits":50}],"ip_limit":1000,"limit_time_unit":"HOURS","remaining_ip_hits":997,"remaining_user_hits":150,"reset_time":"2015-10-17 17:00:00","reset_time_in_seconds":290,"user_limit":150}
+
+894  INFO  [2015-10-17 16:55:12]  RateLimitStatus [ipLimit=1000, remainingIpHits=997, remainingUserHits=150, resetTime=2015-10-17 17:00:00, resetTimeInSeconds=290, userLimit=150, apiRateLimit=[api_rate_limits [api=/statuses/update, limit=15, limitTimeUnit=HOURS, remainingHits=15], api_rate_limits [api=/comments/create, limit=15, limitTimeUnit=HOURS, remainingHits=15], api_rate_limits [api=/direct_messages/new, limit=15, limitTimeUnit=HOURS, remainingHits=15], api_rate_limits [api=/friendships/create, limit=15, limitTimeUnit=DAYS, remainingHits=15], api_rate_limits [api=/statuses/update, limit=50, limitTimeUnit=DAYS, remainingHits=50], api_rate_limits [api=/comments/create, limit=50, limitTimeUnit=DAYS, remainingHits=50], api_rate_limits [api=/users/query, limit=15, limitTimeUnit=DAYS, remainingHits=15], api_rate_limits [api=/users/query, limit=500, limitTimeUnit=HOURS, remainingHits=500], api_rate_limits [api=/users/query, limit=1000, limitTimeUnit=DAYS, remainingHits=1000], api_rate_limits [api=/users/query, limit=50, limitTimeUnit=MINUTES, remainingHits=50]]]
+0    DEBUG [2015-10-17 20:34:52]  Request:
+14   DEBUG [2015-10-17 20:34:52]  GET:https://api.weibo.com/2/account/get_uid.json
+76   DEBUG [2015-10-17 20:34:52]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+77   DEBUG [2015-10-17 20:34:52]  API-RemoteIP: 172.18.198.129
+2139 DEBUG [2015-10-17 20:34:54]  Response:
+2139 DEBUG [2015-10-17 20:34:54]  https StatusCode:200
+2140 DEBUG [2015-10-17 20:34:54]  Server:nginx/1.6.1
+2140 DEBUG [2015-10-17 20:34:54]  Date:Sat, 17 Oct 2015 12:34:51 GMT
+2140 DEBUG [2015-10-17 20:34:54]  Content-Type:application/json;charset=UTF-8
+2140 DEBUG [2015-10-17 20:34:54]  Transfer-Encoding:chunked
+2141 DEBUG [2015-10-17 20:34:54]  Connection:keep-alive
+2141 DEBUG [2015-10-17 20:34:54]  Api-Server-IP:10.77.108.129
+2141 DEBUG [2015-10-17 20:34:54]  Vary:Accept-Encoding
+2141 DEBUG [2015-10-17 20:34:54]  SINA-LB:aGEuMjEuZzEuc2UubGIuc2luYW5vZGUuY29t
+2142 DEBUG [2015-10-17 20:34:54]  SINA-TS:NDg4OGMzNjggMCAxIDEgNyA5Cg==
+2163 WARN  [2015-10-17 20:34:54]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2165 DEBUG [2015-10-17 20:34:54]  {"uid":1252999410}
+
+2203 DEBUG [2015-10-17 20:34:54]  Request:
+2203 DEBUG [2015-10-17 20:34:54]  GET:https://api.weibo.com/2/users/show.json
+2222 DEBUG [2015-10-17 20:34:54]  Authorization: OAuth2 2.00u49n3BXYoRvCc2a3de434cYiPpZD
+2222 DEBUG [2015-10-17 20:34:54]  API-RemoteIP: 172.18.198.129
+2283 DEBUG [2015-10-17 20:34:54]  Response:
+2284 DEBUG [2015-10-17 20:34:54]  https StatusCode:200
+2284 DEBUG [2015-10-17 20:34:54]  Server:nginx/1.6.1
+2284 DEBUG [2015-10-17 20:34:54]  Date:Sat, 17 Oct 2015 12:34:52 GMT
+2284 DEBUG [2015-10-17 20:34:54]  Content-Type:application/json;charset=UTF-8
+2285 DEBUG [2015-10-17 20:34:54]  Transfer-Encoding:chunked
+2285 DEBUG [2015-10-17 20:34:54]  Connection:keep-alive
+2285 DEBUG [2015-10-17 20:34:54]  Api-Server-IP:10.77.108.37
+2285 DEBUG [2015-10-17 20:34:54]  Vary:Accept-Encoding
+2285 DEBUG [2015-10-17 20:34:54]  SINA-LB:aGEuMjEuZzEuc2UubGIuc2luYW5vZGUuY29t
+2285 DEBUG [2015-10-17 20:34:54]  SINA-TS:NDg4OGMzNjggMCAxIDEgNyAxMgo=
+2286 WARN  [2015-10-17 20:34:54]  Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2287 DEBUG [2015-10-17 20:34:54]  {"id":1252999410,"idstr":"1252999410","class":1,"screen_name":"八方竹圃","name":"八方竹圃","province":"22","city":"1000","location":"吉林","description":"许你一生","url":"","profile_image_url":"http://tp3.sinaimg.cn/1252999410/50/5616328883/1","profile_url":"u/1252999410","domain":"","weihao":"","gender":"m","followers_count":33,"friends_count":36,"pagefriends_count":0,"statuses_count":93,"favourites_count":2,"created_at":"Mon Nov 14 17:02:46 +0800 2011","following":false,"allow_all_act_msg":true,"geo_enabled":true,"verified":false,"verified_type":-1,"remark":"","status":{"created_at":"Sat Sep 26 00:15:38 +0800 2015","id":3891115700351207,"mid":"3891115700351207","idstr":"3891115700351207","text":"今天我在#百词斩# 背了55个四级词汇单词。真正的朋友才不会因为你胖就去劝你节食，但却会因为担心你下个月一个人去英国的旅行计划帮你的手机装一个GoogleMap和百词斩。 你也来背单词吧 >>> http://t.cn/RAatgxg #7天养成一个好习惯#","source_allowclick":1,"source_type":1,"source":"<a href=\"http://app.weibo.com/t/feed/110qJT\" rel=\"nofollow\">百词斩图背单词</a>","favorited":false,"truncated":false,"in_reply_to_status_id":"","in_reply_to_user_id":"","in_reply_to_screen_name":"","pic_urls":[{"thumbnail_pic":"http://ww2.sinaimg.cn/thumbnail/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg"}],"thumbnail_pic":"http://ww2.sinaimg.cn/thumbnail/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg","bmiddle_pic":"http://ww2.sinaimg.cn/bmiddle/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg","original_pic":"http://ww2.sinaimg.cn/large/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg","geo":null,"annotations":[{"sdk_request":true}],"reposts_count":0,"comments_count":0,"attitudes_count":0,"mlevel":0,"visible":{"type":0,"list_id":0},"biz_feature":0,"darwin_tags":[],"userType":0},"ptype":0,"allow_all_comment":true,"avatar_large":"http://tp3.sinaimg.cn/1252999410/180/5616328883/1","avatar_hd":"http://tp3.sinaimg.cn/1252999410/180/5616328883/1","verified_reason":"","verified_trade":"","verified_reason_url":"","verified_source":"","verified_source_url":"","follow_me":false,"online_status":0,"bi_followers_count":0,"lang":"zh-cn","star":0,"mbtype":0,"mbrank":0,"block_word":0,"block_app":0,"credit_score":80,"user_ability":0,"urank":9}
+
+2482 INFO  [2015-10-17 20:34:54]  User [id=1252999410, screenName=八方竹圃, name=八方竹圃, province=22, city=1000, location=吉林, description=许你一生, url=, profileImageUrl=http://tp3.sinaimg.cn/1252999410/50/5616328883/1, userDomain=, gender=m, followersCount=33, friendsCount=36, statusesCount=93, favouritesCount=2, createdAt=Mon Nov 14 17:02:46 CST 2011, following=false, verified=false, verifiedType=-1, allowAllActMsg=true, allowAllComment=true, followMe=false, avatarLarge=http://tp3.sinaimg.cn/1252999410/180/5616328883/1, onlineStatus=0, status=Status [user=null, idstr=3891115700351207, createdAt=Sat Sep 26 00:15:38 CST 2015, id=3891115700351207, text=今天我在#百词斩# 背了55个四级词汇单词。真正的朋友才不会因为你胖就去劝你节食，但却会因为担心你下个月一个人去英国的旅行计划帮你的手机装一个GoogleMap和百词斩。 你也来背单词吧 >>> http://t.cn/RAatgxg #7天养成一个好习惯#, source=Source [url=http://app.weibo.com/t/feed/110qJT, relationShip=nofollow, name=百词斩图背单词], favorited=false, truncated=false, inReplyToStatusId=-1, inReplyToUserId=-1, inReplyToScreenName=, thumbnailPic=http://ww2.sinaimg.cn/thumbnail/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg, bmiddlePic=http://ww2.sinaimg.cn/bmiddle/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg, originalPic=http://ww2.sinaimg.cn/large/4aaf40f2jw1ewf5krzislj20h807e3yn.jpg, retweetedStatus=null, geo=null, latitude=-1.0, longitude=-1.0, repostsCount=0, commentsCount=0, mid=3891115700351207, annotations=[{"sdk_request":true}], mlevel=0, visible=Visible [type=0, list_id=0]], biFollowersCount=0, remark=null, lang=zh-cn, verifiedReason=, weihao=, statusId=]
+0    INFO  [2015-10-17 21:13:34]  code: 0cab9a134becc0089df58b1fd45415fa
+6    DEBUG [2015-10-17 21:13:35]  Request:
+6    DEBUG [2015-10-17 21:13:35]  POSThttps://api.weibo.com/oauth2/access_token
+831  DEBUG [2015-10-17 21:13:35]  Response:
+831  DEBUG [2015-10-17 21:13:35]  https StatusCode:200
+832  DEBUG [2015-10-17 21:13:35]  Server:nginx/1.6.1
+832  DEBUG [2015-10-17 21:13:35]  Date:Sat, 17 Oct 2015 13:13:33 GMT
+833  DEBUG [2015-10-17 21:13:35]  Content-Type:text/plain;charset=UTF-8
+833  DEBUG [2015-10-17 21:13:35]  Content-Length:117
+833  DEBUG [2015-10-17 21:13:35]  Connection:keep-alive
+834  DEBUG [2015-10-17 21:13:35]  Pragma:No-cache
+834  DEBUG [2015-10-17 21:13:35]  Cache-Control:no-cache
+834  DEBUG [2015-10-17 21:13:35]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+835  DEBUG [2015-10-17 21:13:35]  Api-Server-IP:10.75.2.83
+835  DEBUG [2015-10-17 21:13:35]  SINA-LB:aGEuMTc1LmcxLnNlLmxiLnNpbmFub2RlLmNvbQ==
+836  DEBUG [2015-10-17 21:13:35]  SINA-TS:NGI4OGMzNjggMCAxIDEgNyAyNQo=
+843  DEBUG [2015-10-17 21:13:35]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
+1    INFO  [2015-10-17 21:47:33]  code: 8aa43c6ddb426bca6e215b75f071463d
+9    DEBUG [2015-10-17 21:47:33]  Request:
+9    DEBUG [2015-10-17 21:47:33]  POSThttps://api.weibo.com/oauth2/access_token
+1394 DEBUG [2015-10-17 21:47:34]  Response:
+1394 DEBUG [2015-10-17 21:47:34]  https StatusCode:200
+1395 DEBUG [2015-10-17 21:47:34]  Server:nginx/1.6.1
+1395 DEBUG [2015-10-17 21:47:34]  Date:Sat, 17 Oct 2015 13:47:32 GMT
+1396 DEBUG [2015-10-17 21:47:34]  Content-Type:text/plain;charset=UTF-8
+1396 DEBUG [2015-10-17 21:47:34]  Content-Length:117
+1396 DEBUG [2015-10-17 21:47:34]  Connection:keep-alive
+1397 DEBUG [2015-10-17 21:47:34]  Pragma:No-cache
+1397 DEBUG [2015-10-17 21:47:34]  Cache-Control:no-cache
+1397 DEBUG [2015-10-17 21:47:34]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+1398 DEBUG [2015-10-17 21:47:34]  Api-Server-IP:10.73.89.47
+1404 DEBUG [2015-10-17 21:47:34]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
+0    INFO  [2015-10-17 22:14:14]  code: 9b1d9dbf9813fd5f7947e962893e3451
+7    DEBUG [2015-10-17 22:14:14]  Request:
+8    DEBUG [2015-10-17 22:14:14]  POSThttps://api.weibo.com/oauth2/access_token
+861  DEBUG [2015-10-17 22:14:15]  Response:
+862  DEBUG [2015-10-17 22:14:15]  https StatusCode:200
+862  DEBUG [2015-10-17 22:14:15]  Server:nginx/1.6.1
+863  DEBUG [2015-10-17 22:14:15]  Date:Sat, 17 Oct 2015 14:14:12 GMT
+863  DEBUG [2015-10-17 22:14:15]  Content-Type:text/plain;charset=UTF-8
+863  DEBUG [2015-10-17 22:14:15]  Content-Length:117
+864  DEBUG [2015-10-17 22:14:15]  Connection:keep-alive
+864  DEBUG [2015-10-17 22:14:15]  Pragma:No-cache
+865  DEBUG [2015-10-17 22:14:15]  Cache-Control:no-cache
+865  DEBUG [2015-10-17 22:14:15]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+865  DEBUG [2015-10-17 22:14:15]  Api-Server-IP:10.75.25.86
+873  DEBUG [2015-10-17 22:14:15]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
+0    INFO  [2015-10-17 22:48:35]  code: eafcfe7fda8cee2b1f0faf4acf0b1e86
+8    DEBUG [2015-10-17 22:48:35]  Request:
+9    DEBUG [2015-10-17 22:48:35]  POSThttps://api.weibo.com/oauth2/access_token
+1063 DEBUG [2015-10-17 22:48:36]  Response:
+1064 DEBUG [2015-10-17 22:48:36]  https StatusCode:200
+1065 DEBUG [2015-10-17 22:48:36]  Server:nginx/1.6.1
+1065 DEBUG [2015-10-17 22:48:36]  Date:Sat, 17 Oct 2015 14:48:34 GMT
+1066 DEBUG [2015-10-17 22:48:36]  Content-Type:text/plain;charset=UTF-8
+1066 DEBUG [2015-10-17 22:48:36]  Content-Length:117
+1066 DEBUG [2015-10-17 22:48:36]  Connection:keep-alive
+1067 DEBUG [2015-10-17 22:48:36]  Pragma:No-cache
+1067 DEBUG [2015-10-17 22:48:36]  Cache-Control:no-cache
+1067 DEBUG [2015-10-17 22:48:36]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+1068 DEBUG [2015-10-17 22:48:36]  Api-Server-IP:10.73.89.48
+1074 DEBUG [2015-10-17 22:48:36]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
+0    INFO  [2015-10-17 23:22:26]  code: ebab695dc442e1a677456f309ca37f44
+9    DEBUG [2015-10-17 23:22:26]  Request:
+10   DEBUG [2015-10-17 23:22:26]  POSThttps://api.weibo.com/oauth2/access_token
+1068 DEBUG [2015-10-17 23:22:27]  Response:
+1069 DEBUG [2015-10-17 23:22:27]  https StatusCode:200
+1069 DEBUG [2015-10-17 23:22:27]  Server:nginx/1.6.1
+1069 DEBUG [2015-10-17 23:22:27]  Date:Sat, 17 Oct 2015 15:22:25 GMT
+1069 DEBUG [2015-10-17 23:22:27]  Content-Type:text/plain;charset=UTF-8
+1069 DEBUG [2015-10-17 23:22:27]  Content-Length:117
+1070 DEBUG [2015-10-17 23:22:27]  Connection:keep-alive
+1070 DEBUG [2015-10-17 23:22:27]  Pragma:No-cache
+1070 DEBUG [2015-10-17 23:22:27]  Cache-Control:no-cache
+1070 DEBUG [2015-10-17 23:22:27]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
+1071 DEBUG [2015-10-17 23:22:27]  Api-Server-IP:10.73.89.47
+1076 DEBUG [2015-10-17 23:22:27]  {"access_token":"2.00u49n3BXYoRvCc2a3de434cYiPpZD","remind_in":"157679999","expires_in":157679999,"uid":"1252999410"}
+
