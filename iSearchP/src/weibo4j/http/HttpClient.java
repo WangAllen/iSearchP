@@ -39,6 +39,10 @@ import weibo4j.model.WeiboException;
 import weibo4j.org.json.JSONException;
 
 /**
+ * 基于apache HttpClient封装而来
+ * <p> 实现了java.io.Serializable
+ * <p> 封装了http页面状态码
+ * 
  * @author sinaWeibo
  * 
  */
@@ -56,11 +60,17 @@ public class HttpClient implements java.io.Serializable {
 	private static final int BAD_GATEWAY           = 502;// Bad Gateway: Weibo is down or being upgraded.
 	private static final int SERVICE_UNAVAILABLE   = 503;// Service Unavailable: The Weibo servers are up, but overloaded with requests. Try again later. The search and trend methods use this to indicate when you are being rate limited.
 
+	// 初始化，通过配置信息获取
+	// 获取weibo4j的默认配置信息
 	private String proxyHost = Configuration.getProxyHost();
 	private int proxyPort = Configuration.getProxyPort();
 	private String proxyAuthUser = Configuration.getProxyUser();
 	private String proxyAuthPassword = Configuration.getProxyPassword();
 
+	/**
+	 * 代理服务器
+	 * @return
+	 */
 	public String getProxyHost() {
 		return proxyHost;
 	}

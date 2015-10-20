@@ -1,29 +1,29 @@
-/*
-Copyright (c) 2007-2009, Yusuke Yamamoto
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of the Yusuke Yamamoto nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY Yusuke Yamamoto ``AS IS'' AND ANY
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL Yusuke Yamamoto BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+/**
+ * <p> Copyright (c) 2007-2009, Yusuke Yamamoto
+ * <p> All rights reserved.
+ * 
+ * <p> Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *	<p> Redistributions of source code must retain the above copyright
+ *      notice, this list of conditions and the following disclaimer.
+ *  <p> Redistributions in binary form must reproduce the above copyright
+ *      notice, this list of conditions and the following disclaimer in the
+ *      documentation and/or other materials provided with the distribution.
+ *  <p> Neither the name of the Yusuke Yamamoto nor the
+ *  	names of its contributors may be used to endorse or promote products
+ *      derived from this software without specific prior written permission.
+ *      
+ *  <p> THIS SOFTWARE IS PROVIDED BY Yusuke Yamamoto ``AS IS'' AND ANY 
+ *  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL Yusuke Yamamoto BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 package weibo4j.model;
 
 import java.io.File;
@@ -33,6 +33,8 @@ import java.security.AccessControlException;
 import java.util.Properties;
 
 /**
+ * 封装了weibo4j的一些默认配置属性
+ * 
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
 public class Configuration {
@@ -132,6 +134,10 @@ public class Configuration {
         return getProperty("weibo4j.source", source);
     }
 
+    /**
+     * 代理服务器
+     * @return
+     */
     public static String getProxyHost() {
         return getProperty("weibo4j.http.proxyHost");
     }
@@ -140,6 +146,10 @@ public class Configuration {
         return getProperty("weibo4j.http.proxyHost", proxyHost);
     }
 
+    /**
+     * weibo4j.http.proxyUser
+     * @return
+     */
     public static String getProxyUser() {
         return getProperty("weibo4j.http.proxyUser");
     }
@@ -156,6 +166,10 @@ public class Configuration {
         return getProperty("weibo4j.clientURL", clientURL);
     }
 
+    /**
+     * weibo4j.http.proxyPassword
+     * @return
+     */
     public static String getProxyPassword() {
         return getProperty("weibo4j.http.proxyPassword");
     }
@@ -164,6 +178,10 @@ public class Configuration {
         return getProperty("weibo4j.http.proxyPassword", password);
     }
 
+    /**
+     * 获取端口号
+     * @return
+     */
     public static int getProxyPort() {
         return getIntProperty("weibo4j.http.proxyPort");
     }
@@ -249,6 +267,12 @@ public class Configuration {
         return Boolean.valueOf(value);
     }
 
+    /**
+     * 属性作为int型获取
+     * 
+     * @param name
+     * @return
+     */
     public static int getIntProperty(String name) {
         String value = getProperty(name);
         try {
@@ -276,10 +300,23 @@ public class Configuration {
         }
     }
 
+    /**
+     * 根据name获取属性
+     * 
+     * @param name
+     * @return
+     */
     public static String getProperty(String name) {
         return getProperty(name, null);
     }
 
+    
+    /**
+     * 根据参数name和fallbackValue获取属性，若找不到name属性，则将fallbackValue作为默认属性返回。
+     * @param name
+     * @param fallbackValue
+     * @return
+     */
     public static String getProperty(String name, String fallbackValue) {
         String value;
         try {
@@ -300,23 +337,29 @@ public class Configuration {
         return replace(value);
     }
 
+    /**
+     * @param value
+     * @return
+     */
     private static String replace(String value) {
-        if (null == value) {
+        if (null == value) {	// value为空，直接返回
             return value;
         }
         String newValue = value;
-        int openBrace = 0;
-        if (-1 != (openBrace = value.indexOf("{", openBrace))) {
-            int closeBrace = value.indexOf("}", openBrace);
-            if (closeBrace > (openBrace + 1)) {
-                String name = value.substring(openBrace + 1, closeBrace);
+        int openBrace = 0;	// 标志"{"位置
+        if (-1 != (openBrace = value.indexOf("{", openBrace))) {	// 从头开始的第一个"{"位置
+            int closeBrace = value.indexOf("}", openBrace);	// 从第一个"{"开始的第一个"}"位置
+            if (closeBrace > (openBrace + 1)) {	// 第一对“{}”中有内容
+                String name = value.substring(openBrace + 1, closeBrace);	// 获取{}中的内容作为name
                 if (name.length() > 0) {
+                	// 将字符串中的name替换成Configuration中配置的属性值name对应的值
                     newValue = value.substring(0, openBrace) + getProperty(name)
                             + value.substring(closeBrace + 1);
 
                 }
             }
         }
+        // 一直替换到value和newValue相同为止
         if (newValue.equals(value)) {
             return value;
         } else {
